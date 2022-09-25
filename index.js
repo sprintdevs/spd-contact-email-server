@@ -41,6 +41,10 @@ app.post('/contact', (req, res) => {
     )
 })
 
+app.get('/health', (req, res) => {
+    return res.json({ status: "OK" }).status(200);
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running at PORT: ${PORT}`)
 })
